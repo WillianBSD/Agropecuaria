@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroVerde | Gestão Rural Sustentável</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+</head>
+<body>
+
+<header>
+  <div class="logo">AgroVerde</div>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#praticas">Práticas</a>
+    <a href="#agua">Água</a>
+    <a href="#energia">Energia</a>
+    <a href="#clima">Clima</a>
+    <a href="#projetos">Projetos</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1>Gestão Rural Inteligente e Sustentável</h1>
+    <p>Gerencie sua propriedade rural com tecnologia, economia de recursos e responsabilidade ambiental.</p>
+    <a href="#servicos" class="btn">Explorar plataforma</a>
+  </div>
+</section>
+
+<main>
+<section class="dashboard" id="servicos">
+  <h2>Painel de Gestão Rural</h2>
+  <p>Acompanhe as principais ferramentas da sua propriedade.</p>
+
+  <div class="cards">
+    <article class="card" id="praticas">
+      <h3>Práticas Sustentáveis</h3>
+      <p>Conheça técnicas de agricultura e pecuária sustentável.</p>
+      <a href="#guia">Acessar guia</a>
+    </article>
+
+    <article class="card" id="agua">
+      <h3>Economia de Água</h3>
+      <p>Calcule o potencial de economia hídrica da propriedade.</p>
+      <a href="#calculadora">Calcular</a>
+    </article>
+
+    <article class="card">
+      <h3>Fornecedores Sustentáveis</h3>
+      <p>Encontre parceiros e produtos responsáveis.</p>
+      <a href="#fornecedores">Consultar mapa</a>
+    </article>
+
+    <article class="card" id="energia">
+      <h3>Energia Renovável</h3>
+      <p>Simule investimentos em energia solar.</p>
+      <a href="#simulador">Simular</a>
+    </article>
+
+    <article class="card" id="clima">
+      <h3>Previsão Climática</h3>
+      <p>Consulte informações meteorológicas para o campo.</p>
+      <a href="#previsao">Consultar clima</a>
+    </article>
+
+    <article class="card" id="projetos">
+      <h3>Projetos Ambientais</h3>
+      <p>Gerencie ações de preservação ambiental.</p>
+      <a href="#ambiental">Ver projetos</a>
+    </article>
+  </div>
+</section>
+
+<section class="tool" id="guia">
+  <h2>Guia de Práticas Sustentáveis</h2>
+  <div class="guide">
+    <p>Rotação de culturas e conservação do solo.</p>
+    <p>Compostagem e adubação orgânica.</p>
+    <p>Captação e armazenamento de água da chuva.</p>
+    <p>Recuperação de pastagens degradadas.</p>
+    <p>Controle biológico de pragas.</p>
+    <p>Preservação de matas ciliares.</p>
+  </div>
+</section>
+
+<section class="tool" id="calculadora">
+  <h2>Calculadora de Economia de Água</h2>
+  <label>Consumo mensal atual (litros)</label>
+  <input type="number" id="consumo" placeholder="Ex: 10000">
+
+  <label>Redução estimada (%)</label>
+  <input type="number" id="reducao" placeholder="Ex: 20">
+
+  <button onclick="calcularAgua()">Calcular economia</button>
+  <div id="resultadoAgua" class="resultado"></div>
+</section>
+
+<section class="tool" id="fornecedores">
+  <h2>Mapa de Fornecedores Sustentáveis</h2>
+  <p>Consulte fornecedores e parceiros da sua região.</p>
+  <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-38.6%2C-5.9%2C-35.5%2C-4.5&layer=mapnik" width="100%" height="350" style="border:0" loading="lazy"></iframe>
+  <p class="nota">Mapa ilustrativo da região de Natal, RN.</p>
+</section>
+
+<section class="tool" id="simulador">
+  <h2>Simulador de Energia Renovável</h2>
+
+  <label>Consumo mensal de energia (kWh)</label>
+  <input type="number" id="energia" placeholder="Ex: 500">
+
+  <label>Valor da conta de energia (R$)</label>
+  <input type="number" id="conta" placeholder="Ex: 600">
+
+  <label>Percentual de economia estimada (%)</label>
+  <input type="number" id="percentualEnergia" value="70">
+
+  <button onclick="simularEnergia()">Simular energia solar</button>
+  <div id="resultadoEnergia" class="resultado"></div>
+</section>
+
+<section class="tool" id="previsao">
+  <h2>Previsão Climática Agrícola</h2>
+  <p>Consulte a previsão meteorológica para apoiar seu planejamento rural.</p>
+
+  <input type="text" id="cidade" placeholder="Digite a cidade">
+  <button onclick="consultarClima()">Consultar clima</button>
+
+  <div id="resultadoClima" class="resultado"></div>
+</section>
+
+<section class="tool" id="ambiental">
+  <h2>Projetos Ambientais</h2>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Reflorestamento</h3>
+      <p>Plantio de espécies nativas e recuperação de áreas degradadas.</p>
+    </article>
+
+    <article class="card">
+      <h3>Proteção de Nascentes</h3>
+      <p>Conservação das fontes de água da propriedade.</p>
+    </article>
+
+    <article class="card">
+      <h3>Preservação do Solo</h3>
+      <p>Práticas de controle da erosão e conservação do solo.</p>
+    </article>
+  </div>
+
+  <h3>Cadastrar novo projeto</h3>
+  <input type="text" id="nomeProjeto" placeholder="Nome do projeto">
+  <textarea id="descricaoProjeto" placeholder="Descrição do projeto"></textarea>
+  <button onclick="cadastrarProjeto()">Cadastrar projeto</button>
+  <div id="listaProjetos"></div>
+</section>
+</main>
+
+<footer>
+  <h3>AgroVerde</h3>
+  <p>Gestão rural com responsabilidade ambiental.</p>
+  <p>© 2026 AgroVerde - Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
