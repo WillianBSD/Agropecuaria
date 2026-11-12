@@ -1,0 +1,229 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2ead8;
+  color: #423c2e;
+}
+
+header {
+  background: #31583b;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #d7c69b;
+}
+
+.hero {
+  min-height: 390px;
+  background:
+    linear-gradient(rgba(29,58,36,.65), rgba(29,58,36,.65)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef")
+    center/cover;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.btn, button {
+  background: #567b4a;
+  color: white;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, .btn:hover {
+  background: #31583b;
+}
+
+.dashboard, .tool {
+  padding: 55px 8%;
+}
+
+.dashboard h2, .tool h2 {
+  color: #31583b;
+  margin-bottom: 15px;
+}
+
+.dashboard > p {
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.card {
+  background: #fffaf0;
+  padding: 25px;
+  border-radius: 14px;
+  border-bottom: 5px solid #6b8050;
+  box-shadow: 0 4px 12px #57452a18;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #426044;
+  margin: 15px 0;
+}
+
+.card p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.card a {
+  color: #80603e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tool {
+  background: #e8dfca;
+  margin: 20px 5%;
+  border-radius: 15px;
+}
+
+.guide {
+  background: #fffaf0;
+  padding: 25px;
+  border-radius: 10px;
+  line-height: 2.3;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border: 1px solid #b7a98c;
+  border-radius: 7px;
+  background: #fffaf0;
+  color: #423c2e;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.tool button {
+  margin-top: 10px;
+}
+
+.resultado {
+  background: #fffaf0;
+  border-left: 5px solid #567b4a;
+  padding: 18px;
+  margin-top: 18px;
+  border-radius: 7px;
+  line-height: 1.8;
+}
+
+iframe {
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.nota {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#listaProjetos {
+  margin-top: 20px;
+}
+
+.projeto {
+  background: #fffaf0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+footer {
+  background: #31583b;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  line-height: 2;
+}
+
+@media(max-width: 650px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 350px;
+  }
+
+  .tool, .dashboard {
+    padding: 30px 6%;
+  }
+}
